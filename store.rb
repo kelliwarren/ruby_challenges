@@ -1,6 +1,9 @@
 class Store
 
-  @cart = {5 => 10, 1 => 5}
+  def initialize(cart = {})
+    @cart = {5 => 10, 1 => 5}
+
+  end
 
   def checkout
 
@@ -10,5 +13,7 @@ class Store
     total = subtotal1 + tax
 
   end
-  puts checkout
 end
+
+x = Store.new
+x.checkout 
